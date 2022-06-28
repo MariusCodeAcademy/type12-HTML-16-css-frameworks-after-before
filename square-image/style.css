@@ -6,4 +6,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.img-box h2 {
+  color: #fff;
+  z-index: 1;
+}
+.img-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 99, 71, 0.22);
+  transition: all 0.2s;
+}
+
+.img-box:hover .overlay {
+  background-color: rgba(255, 99, 71, 0);
 }
